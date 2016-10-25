@@ -11,7 +11,8 @@ def minimize(f0, f1, f2, guess, epsilon):
     if f2 == 0:
         return "f2 is zero"
     while guess > epsilon:
-        guess = abs(f0 - f1/f2)
+        epsilon = guess - f1(guess)/f2(guess)
+        guess = abs(0 - f(guess))
     return guess
 
 
